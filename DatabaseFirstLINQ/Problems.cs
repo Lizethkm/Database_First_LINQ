@@ -24,10 +24,10 @@ namespace DatabaseFirstLINQ
             //ProblemSeven();
             //ProblemEight();
             //ProblemNine();
-            ProblemTen();
+            //ProblemTen();
             //ProblemEleven();
             //ProblemTwelve();
-            //ProblemThirteen();
+            ProblemThirteen();
             //ProblemFourteen();
             //ProblemFifteen();
             //ProblemSixteen();
@@ -207,6 +207,16 @@ namespace DatabaseFirstLINQ
         private void ProblemTwelve()
         {
             // Create a new Product object and add that product to the Products table using LINQ.
+
+            Product newProduct = new Product()
+            {
+                Name = "iPhone 13 Pro Max",
+                Description = "Super Retina XDR display with ProMotion for a faster, more responsive feel. Lightning-fast A15 Bionic chip. Superfast 5G.1 Durable design and the best battery life ever in an iPhone",
+                Price = 1599
+
+            };
+            _context.Products.Add(newProduct);
+            _context.SaveChanges();
 
         }
 
